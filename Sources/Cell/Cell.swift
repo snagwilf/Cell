@@ -159,8 +159,4 @@ func protoFlip<T: Shape>(_ shape: T) -> some Shape {
     return FlippedShape(shape: shape)
 }
 
-func testShape() {
-    let smallTriangle = Triangle(size: 3)
-    protoFlip(protoFlip(smallTriangle))
-}
 
