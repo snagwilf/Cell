@@ -98,10 +98,11 @@ func makeOpaqueContainer3<T: Hashable>(item: T) -> some Container {
     return [item]
 }
 
-public func testOpaque() {
+public func testOpaque() -> String {
     let opaqueContainer = makeOpaqueContainer(item: 12)
     //let twelve = opaqueContainer[0]
-    print(type(of: opaqueContainer))
+    let t = type(of: opaqueContainer)
+    return "\(t)"
 }
 
 protocol Shape {
